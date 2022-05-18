@@ -1,0 +1,64 @@
+.encapsulate {
+  background-color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.c-authDialog {
+  &__login {
+    border-radius: 10px;
+    background-color: white;
+    padding: 15px 20px 15px 20px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 20px;
+
+    @media screen and (max-width: 560px) {
+      width: 90%;
+    }
+
+    &__header {
+      font-weight: bold;
+      font-size: 30px;
+      color: var(--color-primary);
+    }
+    &__inputs {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      .q-input {
+        transition: 0.3s;
+      }
+    }
+    &__actions {
+      padding: 0 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .changeLabel {
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: bold;
+        text-decoration: underline;
+        color: var(--color-primary);
+      }
+      .goBtn {
+        width: 60px;
+        height: 60px;
+      }
+    }
+    &__error {
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      font-size: 13px;
+      position: absolute;
+      background: red;
+      text-align: center;
+      color: white;
+      font-weight: bold;
+    }
+  }
+}

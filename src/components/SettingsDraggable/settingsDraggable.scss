@@ -1,0 +1,254 @@
+.o-settingsDraggable {
+  padding-top: 0px;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+
+  .see-code {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 188px;
+    .q-btn {
+      padding: 0;
+      margin: 0;
+      line-height: 0;
+      display: flex;
+      justify-content: center;
+      gap: 10px !important;
+    }
+    .q-icon {
+      //width: 40px;
+      // height: 40px;
+      font-size: 18px;
+      border-radius: 4px;
+      padding: 2px;
+    }
+  }
+
+  .container-causas-input-title {
+    // background-color: #f0f5fc;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    gap: 15px;
+    max-height: 710px;
+
+    .title-causas {
+      user-select: none !important;
+      font-size: 22px;
+      line-height: 1;
+      padding: 0 15px;
+      font-weight: bold;
+      text-transform: capitalize;
+    }
+    .add-causa-container {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 0 15px;
+      .q-input {
+        width: 90%;
+      }
+      .q-btn {
+        border-radius: 5px;
+      }
+    }
+  }
+  &__container-causas {
+    padding: 15px;
+    // background-color: #f0f5fc;
+    display: flex;
+    flex-direction: column;
+    max-height: 700px;
+    overflow: auto;
+    gap: 15px;
+
+    .draggable-causas-container {
+      padding: 0 5px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      .item-causa {
+        user-select: none !important;
+        cursor: alias;
+        background-color: #fff;
+        box-shadow: 0px 0px 4px 2px #eee;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        position: relative;
+        padding: 0 10px;
+        text-align: center;
+        line-height: 1.2;
+
+        .line {
+          position: absolute;
+          left: 0;
+          width: 5px;
+          height: 50px;
+          border-radius: 50px;
+        }
+      }
+    }
+  }
+  .container-consecuencias-input-title {
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    gap: 15px;
+
+    .title-consecuencias {
+      padding: 0 15px;
+      text-transform: capitalize;
+      user-select: none !important;
+      font-size: 22px;
+      line-height: 1;
+      font-weight: bold;
+    }
+    .add-consecuencias-container {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 0 15px;
+      .q-input {
+        width: 90%;
+      }
+      .q-btn {
+        border-radius: 5px;
+      }
+    }
+  }
+  &__container-consecuencias {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-height: 600px;
+    overflow: auto;
+
+    .item-consecuencia {
+      border-radius: 15px;
+      border: 1px solid #ccc;
+      padding: 10px 0;
+      .title-consecuencia {
+        cursor: pointer;
+        // display: flex;
+        // justify-content: center;
+        user-select: none !important;
+        padding-right: 10%;
+        padding-bottom: 8px;
+        text-align: center;
+        font-size: 16px;
+        font-weight: bold;
+        text-transform: capitalize;
+      }
+
+      .container-causas-draggable {
+        display: flex;
+        // align-items: center;
+        justify-content: space-around;
+        padding-bottom: 10px;
+
+        .subtitle-causa {
+          user-select: none !important;
+          display: flex;
+          writing-mode: vertical-lr;
+          text-align: center;
+          align-items: center;
+          justify-content: center;
+          color: #fff;
+          border-radius: 5px;
+          font-weight: bold;
+          width: 30px;
+          font-size: 10px !important;
+          text-transform: uppercase;
+          line-height: 1;
+        }
+      }
+      .draggable-causas-of-consecuencia-container {
+        width: 85%;
+        padding: 0 5px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .--placeholder {
+          border: 1px dashed #ccc;
+          box-shadow: 0px 0px 0px 0px #fff !important;
+          cursor: default !important;
+          .line {
+            background-color: white !important;
+          }
+        }
+
+        .causa-item-of-consecuencia {
+          user-select: none !important;
+          background-color: #fff;
+          box-shadow: 0px 0px 4px 2px #eee;
+          border-radius: 5px;
+          display: flex;
+          cursor: pointer;
+          align-items: center;
+          justify-content: center;
+          height: 50px;
+          position: relative;
+          padding: 0 10px;
+          text-align: center;
+          line-height: 1.2;
+
+          .line {
+            position: absolute;
+            left: 0;
+            width: 5px;
+            height: 50px;
+            border-radius: 50px;
+          }
+        }
+
+        .item-causa {
+          cursor: alias;
+          background-color: #fff;
+          box-shadow: 0px 0px 4px 2px #eee;
+          border-radius: 5px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 50px;
+          position: relative;
+          padding: 0 10px;
+          text-align: center;
+          line-height: 1.2;
+
+          .line {
+            position: absolute;
+            left: 0;
+            width: 5px;
+            height: 50px;
+            border-radius: 50px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.notify-message {
+  box-shadow: 0 0 5px 1px #ccc;
+  font-size: 14px;
+  color: black !important;
+  font-weight: bold;
+  background-color: white !important;
+  padding: 10px;
+  margin: 4px;
+  border-radius: 5px;
+}

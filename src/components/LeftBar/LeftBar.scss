@@ -1,0 +1,48 @@
+.c-left-bar {
+  flex: 1;
+  margin: 10px 0;
+  height: fit-content;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0 0 5px 1px #eee;
+
+  &__header {
+    display: flex;
+    justify-content: space-around;
+    font-weight: bold;
+    color: #ccc;
+    padding: 14px 20px;
+    border-bottom: 2px solid #f5f7fb;
+    &__title {
+      cursor: pointer;
+      font-size: 17px;
+    }
+  }
+
+  &__options-container {
+    max-height: 525px;
+    overflow: auto;
+
+    @media screen and (max-width: 1200px) {
+      max-height: 250px;
+    }
+    /*&::-webkit-scrollbar {
+      display: none;
+    }*/
+    &__option {
+      padding: 10px 25px;
+      border-bottom: 2px solid #f5f7fb;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      .q-icon {
+        color: var(--color-primary);
+      }
+      .title {
+        color: #8a8a8a;
+        font-size: 14px;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

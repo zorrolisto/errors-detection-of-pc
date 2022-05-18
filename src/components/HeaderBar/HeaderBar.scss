@@ -1,0 +1,125 @@
+.c-header-bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  align-items: flex-start;
+  padding: 10px;
+
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__left-side {
+    display: flex;
+    gap: 10px;
+
+    @media screen and (max-width: 900px) {
+      flex-direction: column-reverse;
+      .q-separator {
+        display: none;
+      }
+      align-items: flex-end;
+    }
+    @media screen and (max-width: 600px) {
+      margin: auto;
+      padding-top: 1rem;
+      flex-direction: row;
+      flex-wrap: wrap-reverse;
+      justify-content: center;
+    }
+
+    .choosed-btn {
+      color: white;
+      box-shadow: 0 0 5px 1px #eee;
+      background-color: var(--color-primary);
+      border-radius: 5px;
+      padding: 5px;
+    }
+    .settings-btn {
+      background-color: white;
+      box-shadow: 0 0 5px 1px #eee;
+      cursor: pointer;
+      border-radius: 5px;
+      padding: 5px;
+    }
+    .normal-btn {
+      cursor: pointer;
+      background-color: white;
+      border-radius: 5px;
+      width: 35px;
+      height: 35px;
+      padding: 5px;
+      position: relative;
+      .q-icon {
+        position: absolute;
+        font-size: 20px;
+        top: 7px;
+        left: 7px;
+      }
+    }
+    .add-btn {
+      cursor: pointer;
+      background-color: white;
+      color: var(--color-primary);
+      border-radius: 5px;
+      padding: 5px;
+    }
+  }
+  &__title-container {
+    &__title {
+      font-weight: bold;
+      font-size: 22px;
+      line-height: 1.3;
+    }
+    &__subtitle {
+      color: gray;
+      font-size: 12px;
+    }
+  }
+  &__rigth-side {
+    border-bottom: 2px solid var(--color-primary);
+    @media screen and (max-width: 900px) {
+      display: none;
+    }
+    &__title {
+      font-size: 13px;
+      color: rgba(0, 0, 0, 0.816);
+      white-space: nowrap;
+      line-height: 1.3;
+    }
+    &__subtitle {
+      text-transform: capitalize;
+      font-weight: bold;
+      font-size: 16px;
+    }
+  }
+  .logout-btn {
+    background-color: white;
+    color: var(--color-primary);
+    box-shadow: 0 0 5px 1px #eee;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 10px;
+    margin: auto;
+    &:hover {
+      box-shadow: 0 0 5px 1px #ccc;
+    }
+  }
+}
+
+.notify-message {
+  font-size: 14px;
+  color: white;
+  font-weight: bold;
+  background-color: var(--color-primary);
+  padding: 10px;
+  border-bottom-left-radius: 5px;
+}

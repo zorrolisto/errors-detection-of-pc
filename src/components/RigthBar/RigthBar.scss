@@ -1,0 +1,57 @@
+.c-rigth-bar {
+  flex: 1;
+  height: fit-content;
+  margin: 10px 0;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0 0 5px 1px #eee;
+
+  &__header {
+    display: flex;
+    justify-content: space-around;
+    font-weight: bold;
+    padding: 14px 20px;
+    border-bottom: 2px solid #f5f7fb;
+    &__title {
+      font-size: 17px;
+    }
+  }
+
+  &__ranking-title {
+    color: rgb(145, 145, 145);
+    font-weight: bold;
+    padding-top: 15px;
+    text-align: center;
+    font-size: 13px;
+    text-transform: uppercase;
+  }
+  &__ranking-options-container {
+    max-height: 250px;
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    &__option {
+      padding: 0 25px;
+      border-bottom: 2px solid #f5f7fb;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      .q-icon {
+        margin-right: 15px;
+        margin-left: 5px;
+        color: var(--color-primary);
+      }
+      .title {
+        font-size: 14px;
+        text-transform: uppercase;
+      }
+      .ranking-number {
+        // border-bottom: 1px solid var(--color-primary);
+        font-size: 18px;
+        font-weight: bold;
+      }
+    }
+  }
+}
